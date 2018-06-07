@@ -12,9 +12,9 @@
 
   <hr />
 
-  <form class="form-horizontal" action="{{route('admin.user_managment.user.store')}}" method="post">
+  <form class="form-horizontal" action="{{route('admin.user_managment.user.store')}}" method="post" enctype="multipart/form-data">
+    {{-- установка CSRF-защиты --}}
     {{ csrf_field() }}
-
     {{-- Form include --}}
     @include('admin.user_managment.users.partials.form')
 

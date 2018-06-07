@@ -17,6 +17,7 @@
     <thead>
       <th>Имя</th>
       <th>Email</th>
+      <th>Изменен</th>
       <th class="text-right">Действие</th>
     </thead>
     <tbody>
@@ -26,6 +27,7 @@
         <tr>
           <td>{{$user->name}}</td>
           <td>{{$user->email}}</td>
+          <td>{{$user->updated_at}}</td>
           <td class="text-right">
             <form onsubmit="if(confirm('Удалить?')){ return true }else{ return false }" action="{{route('admin.user_managment.user.destroy', $user)}}" method="post">
               {{ method_field('DELETE') }}
