@@ -21,7 +21,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
- 
+
 </head>
 <body>
     <div id="app">
@@ -54,8 +54,9 @@
 
                                 <div >
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <!-- Переход на управление пользователями -->
                                 <li><a class="dropdown-item" href="{{route('admin.user_managment.user.index')}}">Пользователи</a></li>
-
+                                <!-- Выход -->
                                 <li><a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

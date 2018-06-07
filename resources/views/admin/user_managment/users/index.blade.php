@@ -3,7 +3,7 @@
 @section('content')
 
 <div class="container">
-
+<!-- Указываем путь -->
   @component('admin.components.breadcrumb')
     @slot('title') Список пользователей @endslot
     @slot('parent') Главная @endslot
@@ -20,6 +20,8 @@
       <th class="text-right">Действие</th>
     </thead>
     <tbody>
+
+    <!-- Перебираем пользователей и строим список -->
       @forelse ($users as $user)
         <tr>
           <td>{{$user->name}}</td>

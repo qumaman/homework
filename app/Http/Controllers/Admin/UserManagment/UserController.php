@@ -101,7 +101,7 @@ class UserController extends Controller
         ]);
 
         $user->name = $request['name'];
-        $user->email = $request['email'];
+        $user->email = $request['email'];  
         $request['password'] == null ?: $user->password = bcrypt($request['password']);
         $user->save();
 

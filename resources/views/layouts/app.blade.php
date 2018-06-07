@@ -19,6 +19,37 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <style>
+    
+    .title {
+        font-size: 96px;
+        margin-bottom: 40px;
+    }
+
+    .quote {
+        font-size: 24px;
+    }
+
+    label{
+        margin-right:20px;
+    }
+
+    form{
+        background:#efefef;
+        padding:20px;
+        border-radius:10px;
+    }
+
+    input[type="submit"]{
+        background:#0098cb;
+        border:0px;
+        border-radius:5px;
+        color:#fff;
+        padding:10px;
+        margin:20px auto;
+    }
+
+</style>
 </head>
 <body>
     <div id="app">
@@ -51,8 +82,9 @@
 
 <div >
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <!-- Переход на управление пользователями -->
                                 <li><a class="dropdown-item" href="{{route('admin.user_managment.user.index')}}">Пользователи</a></li>
-
+                                <!-- Выход -->
                                 <li><a class="dropdown-item" href="{{ route('logout') }}"
                                        onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">

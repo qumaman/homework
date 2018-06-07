@@ -7,6 +7,11 @@
 		</ul>
 	</div>
 @endif
+<label for="avatar">Загрузить аватар</label>
+<input type="file" id="avatar" name="avatar">
+<input type="hidden" name="_token" value="{{csrf_token()}}">
+<input type="submit" class="pull-right btn btn-sm btn-primary" value="Загрузить">
+<br>
 
 <label for="">Имя</label>
 <input type="text" class="form-control" name="name" placeholder="Имя" value="@if(old('name')){{old('name')}}@else{{$user->name or ""}}@endif" required>
